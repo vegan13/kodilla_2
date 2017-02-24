@@ -1,0 +1,734 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+    main {
+/*        display: none;*/
+    }
+
+    footer {
+/*        display: none;*/
+    }
+
+    body {
+        background: #09E;
+    /*    font-family: "Righteous";*/
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .row::before, 
+    .row::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+/* ########################################## */
+/* ################ DESKTOP ################# */
+
+    [class*="col-"] {
+        min-width: 1px;
+    /*    padding: 12px; */
+       float:left;
+    }
+
+    /* For desktop: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+
+    /* ++++++ NAV LOGO MENU +++++++ */
+
+    nav {
+        background: #17114E;
+        height: auto;
+        font-family: "Righteous";
+        z-index: 10;
+    }
+
+    nav a {
+        text-decoration: none;
+    }
+
+    .logo {
+        display: inline-block;
+/*        float: left;*/
+    }
+
+    .logo a {
+        display: inline-block;
+        text-align: center;
+        color: #fff;
+        height: 100px;
+        margin: 0 auto;
+        padding: 30px 35px;
+        transition: 2s;
+        float: left;
+    }
+
+    .logo a:hover {
+        background: #ffcc2e;
+        color: #000;
+    }
+
+    .menu {
+        float: right;
+    }
+
+    .menu ul {
+        text-align: center;
+        font-size: 0;
+        float:right;
+        height: auto;
+    }
+
+    .menu li {
+        font-size: 16px;
+        display: inline-block;
+    }
+
+    .menu li a {
+        display: inline-block;
+        background: #272263;
+        color: #fff;
+        height: 100px;
+        line-height: 100px;
+        padding: 0 25px;
+        transition: 1s;
+    }
+
+    .menu li a:hover {
+        display: inline-block;
+        background: #fdff00;
+        color: #2a5825;
+        line-height: 100px;
+        transform: rotate(360deg);
+        border-radius: 20%;
+    }
+
+    /* +++++ HERO & SLOGAN +++++ */
+
+    .hero {
+        font-family: Tahoma;
+        width: 100%;
+        height: 100vh;
+        background-image: url(https://i.ytimg.com/vi/zjLc1008J90/maxresdefault.jpg);
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        position: relative;
+        z-index: -10;
+    }
+
+    .slogan {
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 50%;
+        max-width: 800px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .slogan h2 {
+        color: #fff;
+        font-size: 35px;
+        text-align: center;
+        padding: 10% 0;
+    }
+
+    /* +++++ BENEFITS +++++ */
+
+    .benefits {
+        padding-top: 40px;
+        font-family: Tahoma;
+    }
+
+    .benefits > div {
+        padding: 25px;
+    }
+
+    .benefits .fa {
+        display: block;
+        text-align: center; /* działa na icony statyczne */
+        font-size: 120px;
+        margin: 0 auto; /* działa na ikonę dynamiczną - tę która się kręci*/
+        color: #fff;
+    }
+
+    .benefits h3 {
+        text-align: center;
+        padding-top: 35px;
+        color: #fff;
+        font-size: 25px;
+        padding-bottom: 25px;
+    }
+
+    .benefits p {
+        color: #fdff00;
+        font-weight: 600;
+        text-shadow: 1px 1px #000;
+    }
+
+    /* ++++++ ALFABET ++++++ */
+
+    .alfabet {
+        width: 100%;
+        height: 35vh;
+        background-image: url(http://www.freeimageslive.com/galleries/workplace/education/pics/numbers_and_letters.jpg);
+        padding: 20px;
+        box-sizing: border-box;
+        background-size: cover;
+        background-position: 25% 45%;     
+        margin-top: 45px;
+        border-top: 5px solid #f00;
+        border-bottom: 15px solid #2f0;
+    }
+
+    /* +++++ GALLERY ++++++ */
+
+    .gallery > [class*="col-"] {
+        display: block;
+        position: relative;
+        background: #f00;
+        z-index: 40;
+    }
+
+    .gallery img {
+        display: block;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .gallery .layer {
+        background: rgba(255,255,0, 0);
+        height: 250px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 1s;
+        text-align: center;
+        font-size: 2em;
+        cursor: pointer;
+    }
+
+    .gallery .layer:hover {
+        background: rgba(255,255,0, 0.3);
+    }
+
+    .layer i {
+        opacity: 0;
+        padding: 10px;    
+        transition: 1s;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .layer:hover i {
+        opacity: 1;
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    /* ++++++ TEAM ++++++ */
+
+    .team > div {
+        display: inline-block;
+        margin: 55px auto;
+/*        width: 25%;*/
+    }
+
+    .team > div > div {
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        height: 250px;
+        width: 250px;
+        padding: 25px;
+        margin: 0 auto;
+    }
+
+    .team > div > h2 {
+        text-align: center;
+        padding: 25px 25px 0 25px;
+        color: #fff;
+        text-shadow: #000 1px 1px;
+        font-family: Arial;
+    }
+
+    .dyrektorka {
+        background-image: url(http://www.aveleyman.com/Gallery/ActorsB/67944-29197.jpg);
+        background-position: -35px 0;
+    }
+
+    .wozny {
+        background-image: url(http://static1.businessinsider.com/image/52d448f8eab8ea6f74b245a1-960/morpheus-thumb.jpg);
+        background-position: -35px 0;
+    }
+
+    .fizyk {
+        background-image: url(http://www.alzheimersdiseasethebrand.com/uploads/4/1/8/6/41869233/4171988_orig.jpg);
+        background-position: -110px 0;
+    }
+
+    .wf {
+        background-image: url(http://images.uncyc.org/commons/e/e4/Shrek-para-sempre-300-338.jpg);
+        background-position: 0 0;
+    }
+
+    /* +++++++ NUMBERS ++++++++ */
+
+    .numbers {
+        border-top: 4px solid #f00;
+    }
+
+    .numbers div {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .numbers div h2,
+    .numbers div p {
+        text-align: center;
+        font-family: "Righteous";
+        color: wheat;
+        text-shadow: 1px 1px #000;
+    }
+
+    .numbers div h2 {
+        font-size: 1.8em;
+        padding-bottom: 25px;
+    }
+
+    .numbers div p {
+        font-size: 2.5em;  
+    }
+
+    /* +++++++ FOOTER ++++++++ */
+
+    footer {
+        background-color: darkslategray;
+        font-size: 0;
+    }
+
+    footer > .row > div {
+        font-size: 16px;
+        font-family: Tahoma;
+        padding: 25px;
+    }
+
+    footer div h2 {
+        text-align: center;
+        font-size: 25px;
+        color: #fff;
+        border-top: 2px solid #f00;
+        border-bottom: 2px solid #fdff00;
+        padding: 3px;
+    }
+
+    footer div h3 {
+        padding-bottom: 4px;
+    }
+
+    footer .social .social-icons {
+        font-size: 55px;
+        text-align: center;
+    }
+
+    footer .social .social-icons a {
+        text-decoration: none;
+        color: #2f0;
+    }
+
+    footer h3, footer p {
+        color: #fff;
+        text-shadow: 1px 1px #000;
+    }
+
+    .contact .row {
+        padding-bottom: 10px;
+    }
+
+
+/* ############################################# */
+/* ################ MAX 1100px ################# */
+
+@media (max-width: 1100px){
+    
+    /*--------- team --------*/
+    
+    .team {
+        font-size: 0px;
+        text-align: center;
+    }
+    
+    .team > div {
+        display: inline-block;
+        margin: 25px auto;
+        width: 33%;
+        float: none;
+        font-size: 16px;
+    }
+    
+    /*------- numbers -------*/
+    
+    .numbers div h2 {
+        font-size: 1.6em;
+        padding-bottom: 20px;
+    }    
+    
+}
+
+/* ############################################ */
+/* ################ MAX 950px ################# */
+
+@media (max-width: 950px){
+    
+    .logo {
+        display: block;
+        float: none;
+    }
+
+    .logo a {
+        display: block;
+        color: #fff;
+        transition: unset;
+        float: none;
+    }
+    
+    .logo a:hover {
+        background: #17114E;
+        color: #fff;
+    }
+
+    .logo a:active {
+        background: #ffcc2e;
+        color: #000;
+    }
+    
+    .menu {
+        float: none;
+        background: #272263;
+        border-top: 2px solid red;
+    }
+
+    .menu ul {
+        text-align: center;
+        font-size: 0;
+        float: none;
+    }
+
+    .menu li {
+        font-size: 16px;
+        display: inline-block;
+    }
+
+    .menu li a {
+        display: inline-block;
+        background: #272263;
+        color: #fff;
+        padding: 0 25px;
+        transition: unset;
+    }
+
+    .menu li a:hover {
+        background: #272263;
+        color: #fff;
+        transform: none;
+        border-radius: 0;
+    }
+    
+    .menu li a:active {
+        display: inline-block;
+        background: #fdff00;
+        color: #2a5825;
+        line-height: 100px;
+        transform: none;
+        border-radius: 0;
+    }  
+    
+    
+    /*-------- numbers -------*/
+    
+    .numbers div p {
+        font-size: 2em;  
+    }
+    
+}
+
+/* ############################################ */
+/* ################ MAX 767px ################# */
+
+@media (max-width: 767px){
+    
+    [class*="col-"] {
+        width: 50%;
+    /*    padding: 12px; */
+       float:left;
+    }
+    
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+    
+    nav {
+        background: #17114E;
+        height: auto;
+        font-family: "Righteous";
+    }
+      
+    .logo {
+        float: none;
+        width: 100%;
+        border-bottom: 2px solid red;        
+    }
+    
+    /*----- menu -----*/
+    
+    .menu {
+        border-top: 0;
+    }
+        
+    .menu ul {
+        float: none;
+    }
+    
+    .menu li {
+        float: none;
+        background: #272263;
+        color: #fff;
+        height: 80px;
+        width: 100%;
+    }
+    
+    .menu li:hover {
+        float: none;
+        background: #272263;
+        color: #fff;
+        height: 80px;
+        width: 100%;
+    }
+        
+    .menu li a {
+        background: #272263;
+        color: #fff;
+        line-height: 80px;
+        border-bottom: 2px solid red;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .menu li a:hover {
+        background: #272263;
+        color: #fff;
+        line-height: 80px;
+        border-bottom: 2px solid red;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .menu li a:active {
+        display: inline-block;
+        background: #fdff00;
+        color: #2a5825;
+        line-height: 80px;
+        transform: none;
+        border-radius: 0;
+    }    
+    
+    /* +++++ HERO & SLOGAN +++++ */
+
+    .hero {
+        height: 70vh;
+    }
+
+    .slogan {
+        width: 90vw;
+    }
+
+    .slogan h2 {
+        color: #fff;
+        font-size: 35px;
+        text-align: center;
+        padding: 10% 0;
+    }
+    
+    
+    /*-------- benefits ---------*/
+    
+    .benefits {
+        padding-top: 0;
+    }
+    
+    .benefits p {
+        text-align: center;
+    }
+    
+    .benefits .fa {
+        font-size: 70px;
+    }    
+    
+    .benefits h3 {
+    padding-top: 15px;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+    
+    .benefits > div {
+        padding-top: 15px;
+    }
+    
+    /*-------- alfabet ---------*/
+    
+    .alfabet {
+        margin-top: 0;
+        height: 10vh;
+        border-bottom: 5px solid #2f0;
+    }
+    
+    /*------- gallery --------*/
+    
+    .gallery col-m-3,
+    .gallery col-m-4,
+    .gallery col-m-5 {
+        width: 50%;
+    }
+    
+    .gallery .layer {
+        display: none;
+    }
+
+    /*-------- team --------*/
+    
+    .team > div {
+        width: 50%;
+    }
+    
+    .team {
+        margin-top: 25px;
+    }
+    
+    .team > div > div {
+    height: 200px;
+    width: 200px;
+    }
+    
+    .team > div > h2 {
+        padding: 25px;
+    }
+        
+    .team > div {
+        display: inline-block;
+        margin: 0;
+    }
+    
+    /*-------- numbers -------*/
+    
+    .numbers div {
+        padding: 25px 0;
+    }
+    
+}
+
+/* ############################################ */
+/* ################ MAX 580px ################# */
+
+@media (max-width: 580px){
+    
+    [class*="col-"] {
+        width: 100%;
+        float:left;
+    }
+    
+    .hero {
+        height: 40vh;
+    }
+
+    .slogan {
+        width: 90vw;
+    }
+
+    .slogan h2 {
+        font-size: 30px;
+    }
+    
+    
+    /*----------- gallery -------------*/
+    
+    .gallery > div img{
+        height: 20vh;
+        object-fit: cover;
+    }
+    
+    /* +++++++ FOOTER ++++++++ */
+
+
+    footer > .row > div {
+        font-size: 16px;
+        font-family: Tahoma;
+        padding: 25px 25px 0 25px;
+    }
+    
+    footer .about p,
+    footer .contact h3, 
+    footer .contact p,
+    footer .social p {
+        text-align: center;
+    }
+    
+    footer .social {
+        margin-bottom: 30px;
+    }
+    
+    footer .contact h3 {
+        padding-top: 10px;
+    }
+
+    .contact .row {
+        padding-bottom: 10px;
+    }
+    
+}
+
+/* ############################################ */
+/* ################ MAX 460px ################# */
+
+@media (max-width: 460px){
+    
+        /*--------- team --------*/
+    
+    .team > div {
+        width: 100%;
+    }
+    
+}
+
